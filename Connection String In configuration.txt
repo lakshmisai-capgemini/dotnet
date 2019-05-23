@@ -1,0 +1,10 @@
+ <connectionStrings>
+    <add name="sqlpracticeconn" connectionString="integrated security=true;initial catalog=sqlpractice;data source=DESKTOP-GSC438L"/>
+  </connectionStrings>
+
+
+
+
+ <connectionStrings>
+    <add name="sqlprac" connectionString="user id=sa;password=98491417;data source=DESKTOP-GSC438L\LAKSHMISAI;initial catalog=sqlpractice" providerName="System.Data.SqlClient" />
+  </connectionStrings>
