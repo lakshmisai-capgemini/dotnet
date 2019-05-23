@@ -1,0 +1,12 @@
+C:\Mini Project New\PMS.BusinessLayer\obj\Debug\PMS.BusinessLayer.csprojAssemblyReference.cache
+C:\Mini Project New\PMS.BusinessLayer\obj\Debug\PMS.BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Mini Project New\PMS.BusinessLayer\bin\Debug\PMS.BusinessLayer.dll
+C:\Mini Project New\PMS.BusinessLayer\bin\Debug\PMS.BusinessLayer.pdb
+C:\Mini Project New\PMS.BusinessLayer\bin\Debug\PMS.DataAccessLayer.dll
+C:\Mini Project New\PMS.BusinessLayer\bin\Debug\EntityFramework.dll
+C:\Mini Project New\PMS.BusinessLayer\bin\Debug\PMS.DataAccessLayer.pdb
+C:\Mini Project New\PMS.BusinessLayer\bin\Debug\PMS.DataAccessLayer.dll.config
+C:\Mini Project New\PMS.BusinessLayer\bin\Debug\EntityFramework.xml
+C:\Mini Project New\PMS.BusinessLayer\obj\Debug\PMS.BusinessLayer.csproj.CopyComplete
+C:\Mini Project New\PMS.BusinessLayer\obj\Debug\PMS.BusinessLayer.dll
+C:\Mini Project New\PMS.BusinessLayer\obj\Debug\PMS.BusinessLayer.pdb

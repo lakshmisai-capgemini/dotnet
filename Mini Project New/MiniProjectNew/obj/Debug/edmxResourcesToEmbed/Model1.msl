@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="sqlpracticeModelStoreContainer" CdmEntityContainer="sqlpracticeEntities2">
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="sqlpracticeModel.Customer">
+        <MappingFragment StoreEntitySet="Customers">
+          <ScalarProperty Name="CustId" ColumnName="CustId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Dob" ColumnName="Dob" />
+          <ScalarProperty Name="Smoker" ColumnName="Smoker" />
+          <ScalarProperty Name="Hobbies" ColumnName="Hobbies" />
+          <ScalarProperty Name="Createid" ColumnName="Createid" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Updateid" ColumnName="Updateid" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Endorsements">
+      <EntityTypeMapping TypeName="sqlpracticeModel.Endorsement">
+        <MappingFragment StoreEntitySet="Endorsement">
+          <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+          <ScalarProperty Name="CustId" ColumnName="CustId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="Policynumber" ColumnName="Policynumber" />
+          <ScalarProperty Name="Createid" ColumnName="Createid" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Updateid" ColumnName="Updateid" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="InsuredName" ColumnName="InsuredName" />
+          <ScalarProperty Name="InsuredAge" ColumnName="InsuredAge" />
+          <ScalarProperty Name="Dob" ColumnName="Dob" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Nominee" ColumnName="Nominee" />
+          <ScalarProperty Name="Relation" ColumnName="Relation" />
+          <ScalarProperty Name="Smoker" ColumnName="Smoker" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="PremiumPaymentFrequency" ColumnName="PremiumPaymentFrequency" />
+          <ScalarProperty Name="EndorsementStatus" ColumnName="EndorsementStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InsuranceProducts">
+      <EntityTypeMapping TypeName="sqlpracticeModel.InsuranceProduct">
+        <MappingFragment StoreEntitySet="InsuranceProducts">
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="Products" ColumnName="Products" />
+          <ScalarProperty Name="Createid" ColumnName="Createid" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Updateid" ColumnName="Updateid" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="ProductType" ColumnName="ProductType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Logins">
+      <EntityTypeMapping TypeName="sqlpracticeModel.Login">
+        <MappingFragment StoreEntitySet="Logins">
+          <ScalarProperty Name="LoginId" ColumnName="LoginId" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="Createid" ColumnName="Createid" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Updateid" ColumnName="Updateid" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Policys">
+      <EntityTypeMapping TypeName="sqlpracticeModel.Policy">
+        <MappingFragment StoreEntitySet="Policys">
+          <ScalarProperty Name="PolicyNumber" ColumnName="PolicyNumber" />
+          <ScalarProperty Name="Customerno" ColumnName="Customerno" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="Createid" ColumnName="Createid" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Updateid" ColumnName="Updateid" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="InsuredName" ColumnName="InsuredName" />
+          <ScalarProperty Name="InsuredAge" ColumnName="InsuredAge" />
+          <ScalarProperty Name="Nominee" ColumnName="Nominee" />
+          <ScalarProperty Name="Relation" ColumnName="Relation" />
+          <ScalarProperty Name="PremiumPaymentFrequency" ColumnName="PremiumPaymentFrequency" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="prcShowPolicy" FunctionName="sqlpracticeModel.Store.prcShowPolicy">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="sqlpracticeModel.prcShowPolicy_Result">
+          <ScalarProperty Name="PolicyNumber" ColumnName="PolicyNumber" />
+          <ScalarProperty Name="Customerno" ColumnName="Customerno" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="Createid" ColumnName="Createid" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Updateid" ColumnName="Updateid" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="InsuredName" ColumnName="InsuredName" />
+          <ScalarProperty Name="InsuredAge" ColumnName="InsuredAge" />
+          <ScalarProperty Name="Nominee" ColumnName="Nominee" />
+          <ScalarProperty Name="Relation" ColumnName="Relation" />
+          <ScalarProperty Name="PremiumPaymentFrequency" ColumnName="PremiumPaymentFrequency" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="prcShowCustomer" FunctionName="sqlpracticeModel.Store.prcShowCustomer">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="sqlpracticeModel.prcShowCustomer_Result">
+          <ScalarProperty Name="CustId" ColumnName="CustId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Dob" ColumnName="Dob" />
+          <ScalarProperty Name="Smoker" ColumnName="Smoker" />
+          <ScalarProperty Name="Hobbies" ColumnName="Hobbies" />
+          <ScalarProperty Name="Createid" ColumnName="Createid" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Updateid" ColumnName="Updateid" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="prcShowLogin" FunctionName="sqlpracticeModel.Store.prcShowLogin">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="sqlpracticeModel.prcShowLogin_Result">
+          <ScalarProperty Name="LoginId" ColumnName="LoginId" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="Createid" ColumnName="Createid" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Updateid" ColumnName="Updateid" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="prcShowInsuranceProduct" FunctionName="sqlpracticeModel.Store.prcShowInsuranceProduct">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="sqlpracticeModel.prcShowInsuranceProduct_Result">
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="Products" ColumnName="Products" />
+          <ScalarProperty Name="Createid" ColumnName="Createid" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Updateid" ColumnName="Updateid" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="ProductType" ColumnName="ProductType" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="prcShowEndorsement" FunctionName="sqlpracticeModel.Store.prcShowEndorsement">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="sqlpracticeModel.prcShowEndorsement_Result">
+          <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+          <ScalarProperty Name="CustId" ColumnName="CustId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="Policynumber" ColumnName="Policynumber" />
+          <ScalarProperty Name="Createid" ColumnName="Createid" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Updateid" ColumnName="Updateid" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="InsuredName" ColumnName="InsuredName" />
+          <ScalarProperty Name="InsuredAge" ColumnName="InsuredAge" />
+          <ScalarProperty Name="Dob" ColumnName="Dob" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Nominee" ColumnName="Nominee" />
+          <ScalarProperty Name="Relation" ColumnName="Relation" />
+          <ScalarProperty Name="Smoker" ColumnName="Smoker" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="PremiumPaymentFrequency" ColumnName="PremiumPaymentFrequency" />
+          <ScalarProperty Name="EndorsementStatus" ColumnName="EndorsementStatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

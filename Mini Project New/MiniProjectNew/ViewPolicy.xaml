@@ -1,0 +1,48 @@
+﻿<Window x:Class="MiniProjectNew.ViewPolicy"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MiniProjectNew"
+        mc:Ignorable="d"
+        Title="ViewPolicy" Height="480" Width="800">
+    <Grid Margin="0,0,-8,-31">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF095161" Offset="1"/>
+                <GradientStop Color="#FFF3F0F0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label Content="Policy Number" HorizontalAlignment="Left" Margin="188,17,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.511,0.984"/>
+        <TextBox x:Name="txtPolicyNumber" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="309,17,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Product Line" HorizontalAlignment="Left" Margin="188,48,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="btnLife" IsEnabled="False"  IsHitTestVisible="False"  GroupName="radio1" Content="Life" HorizontalAlignment="Left" Margin="309,54,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="btnNonLife" IsEnabled="False" IsHitTestVisible="False" GroupName="radio1" Content="Non Life" HorizontalAlignment="Left" Margin="365,54,0,0" VerticalAlignment="Top"/>
+        <Label Content="Product Name" HorizontalAlignment="Left" Margin="188,84,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtProductName" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="309,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Insured Name" HorizontalAlignment="Left" Margin="188,115,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.416,0.666"/>
+        <TextBox x:Name="txtInsuredName" HorizontalAlignment="Left" Height="18" Margin="309,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123"/>
+        <Label Content="Insured Age" HorizontalAlignment="Left" Margin="188,146,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtAge" HorizontalAlignment="Left" Height="23" Margin="309,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="DOB" HorizontalAlignment="Left" Margin="188,174,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.153,0.491"/>
+        <Label Content="Gender" HorizontalAlignment="Left" Margin="188,208,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtDob" HorizontalAlignment="Left" Height="23" Margin="309,177,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <RadioButton x:Name="btnMale" GroupName="rdGender" Content="Male" HorizontalAlignment="Left" Margin="309,214,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="btnFemale" GroupName="rdGender" Content="Female" HorizontalAlignment="Left" Margin="375,214,0,0" VerticalAlignment="Top"/>
+        <Label Content="Nominee" HorizontalAlignment="Left" Margin="188,239,0,0" VerticalAlignment="Top"/>
+        <Label Content="Relation" HorizontalAlignment="Left" Margin="188,270,0,0" VerticalAlignment="Top"/>
+        <Label Content="Smoker/Not" HorizontalAlignment="Left" Margin="188,301,0,0" VerticalAlignment="Top"/>
+        <Label Content="Address" HorizontalAlignment="Left" Margin="188,332,0,0" VerticalAlignment="Top"/>
+        <Label Content="Telephone No" HorizontalAlignment="Left" Margin="188,363,0,0" VerticalAlignment="Top"/>
+        <Label Content="Premium Frequency" HorizontalAlignment="Left" Margin="188,394,0,-1" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtNominee" HorizontalAlignment="Left" Height="23" Margin="309,239,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtRelation" HorizontalAlignment="Left" Height="23" Margin="309,274,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtAddress" HorizontalAlignment="Left" Height="23" Margin="309,336,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtTelephone" HorizontalAlignment="Left" Height="23" Margin="309,367,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtPaymentFrequency" HorizontalAlignment="Left" Height="23" Margin="309,398,0,-2" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <RadioButton x:Name="btnSmoker" GroupName="rdSmoke" Content="Smoker" HorizontalAlignment="Left" Margin="309,307,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="btnNonSmoker" GroupName="rdSmoke" Content="Non Smoker" HorizontalAlignment="Left" Margin="432,307,0,0" VerticalAlignment="Top"/>
+        <Button Content="Update" HorizontalAlignment="Left" Margin="593,169,0,0" VerticalAlignment="Top" Width="119" Height="45" RenderTransformOrigin="0.554,2.737" Click="Button_Click" Background="#FF141514" FontSize="22" Foreground="#FFF7F5F5" FontWeight="Bold"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,12 @@
+C:\Mini Project New\PMS.DataAccessLayer\bin\Debug\PMS.DataAccessLayer.dll.config
+C:\Mini Project New\PMS.DataAccessLayer\bin\Debug\PMS.DataAccessLayer.dll
+C:\Mini Project New\PMS.DataAccessLayer\bin\Debug\PMS.DataAccessLayer.pdb
+C:\Mini Project New\PMS.DataAccessLayer\bin\Debug\EntityFramework.dll
+C:\Mini Project New\PMS.DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Mini Project New\PMS.DataAccessLayer\bin\Debug\EntityFramework.xml
+C:\Mini Project New\PMS.DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Mini Project New\PMS.DataAccessLayer\obj\Debug\PMS.DataAccessLayer.csprojAssemblyReference.cache
+C:\Mini Project New\PMS.DataAccessLayer\obj\Debug\PMS.DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Mini Project New\PMS.DataAccessLayer\obj\Debug\PMS.DataAccessLayer.csproj.CopyComplete
+C:\Mini Project New\PMS.DataAccessLayer\obj\Debug\PMS.DataAccessLayer.dll
+C:\Mini Project New\PMS.DataAccessLayer\obj\Debug\PMS.DataAccessLayer.pdb

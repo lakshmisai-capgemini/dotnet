@@ -1,0 +1,31 @@
+﻿<Window x:Class="MiniProjectNew.CustomerAccess"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MiniProjectNew"
+        mc:Ignorable="d"
+        Title="CustomerAccess" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF252324" Offset="0.502"/>
+                <GradientStop Color="#FFEEEAF7" Offset="1"/>
+                <GradientStop Color="#FFFDFCF4" Offset="0.088"/>
+                <GradientStop Color="#FF1F1C1F" Offset="0.635"/>
+                <GradientStop Color="#FF2A252C" Offset="0.739"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <DataGrid x:Name="grid1" ItemsSource="{Binding}" HorizontalAlignment="Left" Height="306" Margin="49,72,0,0" VerticalAlignment="Top" Width="404" Background="#FF151212" Foreground="#FF092AFB" BorderBrush="#FF138AFD"   />
+        <Button Content="View" HorizontalAlignment="Left" Margin="567,89,0,0" VerticalAlignment="Top" Width="117" Height="36" Click="Button_Click" Background="#FFF51A1A" Foreground="#FFFBF6F6" FontWeight="Bold" FontSize="14"/>
+        <ComboBox Name="cmbSearch" HorizontalAlignment="Left" Margin="490,177,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="txtSearch" HorizontalAlignment="Left" Height="23" Margin="634,177,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Background="#FFF9F9FB" Foreground="#FF0C0B0B"/>
+        <Button Name="btnViewStatus" Content="View Status" HorizontalAlignment="Left" Margin="567,315,0,0" VerticalAlignment="Top" Width="117" Height="41" Background="#FF104BF1" Foreground="#FFFDF9F9" FontSize="16" FontWeight="Bold" Click="BtnViewStatus_Click"/>
+        <Button Name="btnSearch" Content="Search" HorizontalAlignment="Left" Margin="590,260,0,0" VerticalAlignment="Top" Width="80" Background="#FFEEEE40" FontSize="16" FontWeight="Bold" Height="35" Click="BtnSearch_Click"/>
+        <DatePicker Name="dpDob" HorizontalAlignment="Left" Margin="610,216,0,0" VerticalAlignment="Top"/>
+        <Label Content="Customer Window" HorizontalAlignment="Left" Margin="329,10,0,0" VerticalAlignment="Top" Width="220" FontSize="22" FontWeight="Bold" Foreground="#FF1313FD"/>
+        <Label Content="Welcome" HorizontalAlignment="Left" Margin="74,41,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
+        <Label Name="lblName" Content="" HorizontalAlignment="Left" Margin="159,41,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="#FFFB0B0B"/>
+
+    </Grid>
+</Window>

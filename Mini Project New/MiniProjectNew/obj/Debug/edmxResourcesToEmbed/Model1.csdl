@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="sqlpracticeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="CustId" />
+    </Key>
+    <Property Name="CustId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Telephone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Dob" Type="DateTime" Precision="3" />
+    <Property Name="Smoker" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Hobbies" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Createid" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="Updateid" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Endorsements" Relationship="Self.FK__Endorseme__CustI__30592A6F" FromRole="Customers" ToRole="Endorsement" />
+    <NavigationProperty Name="Logins" Relationship="Self.FK__Logins__Customer__3EA749C6" FromRole="Customers" ToRole="Logins" />
+    <NavigationProperty Name="Policys" Relationship="Self.FK__Policys__Custome__178D7CA5" FromRole="Customers" ToRole="Policys" />
+  </EntityType>
+  <EntityType Name="Endorsement">
+    <Key>
+      <PropertyRef Name="TransactionId" />
+    </Key>
+    <Property Name="TransactionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustId" Type="Int32" />
+    <Property Name="ProductId" Type="Int32" />
+    <Property Name="Policynumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Createid" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="Updateid" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="InsuredName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="InsuredAge" Type="Int32" />
+    <Property Name="Dob" Type="DateTime" Precision="3" />
+    <Property Name="Gender" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Nominee" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Relation" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Smoker" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Telephone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PremiumPaymentFrequency" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="EndorsementStatus" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Customer" Relationship="Self.FK__Endorseme__CustI__30592A6F" FromRole="Endorsement" ToRole="Customers" />
+    <NavigationProperty Name="Policy" Relationship="Self.FK__Endorseme__Polic__324172E1" FromRole="Endorsement" ToRole="Policys" />
+    <NavigationProperty Name="InsuranceProduct" Relationship="Self.FK__Endorseme__Produ__314D4EA8" FromRole="Endorsement" ToRole="InsuranceProducts" />
+  </EntityType>
+  <EntityType Name="InsuranceProduct">
+    <Key>
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="ProductId" Type="Int32" Nullable="false" />
+    <Property Name="Products" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Createid" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="Updateid" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="ProductType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Endorsements" Relationship="Self.FK__Endorseme__Produ__314D4EA8" FromRole="InsuranceProducts" ToRole="Endorsement" />
+    <NavigationProperty Name="Policys" Relationship="Self.FK__Policys__Product__1881A0DE" FromRole="InsuranceProducts" ToRole="Policys" />
+  </EntityType>
+  <EntityType Name="Login">
+    <Key>
+      <PropertyRef Name="LoginId" />
+    </Key>
+    <Property Name="LoginId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="CustomerId" Type="Int32" />
+    <Property Name="Createid" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="Updateid" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Customer" Relationship="Self.FK__Logins__Customer__3EA749C6" FromRole="Logins" ToRole="Customers" />
+  </EntityType>
+  <EntityType Name="Policy">
+    <Key>
+      <PropertyRef Name="PolicyNumber" />
+    </Key>
+    <Property Name="PolicyNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Customerno" Type="Int32" />
+    <Property Name="ProductId" Type="Int32" />
+    <Property Name="Createid" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="Updateid" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="InsuredName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="InsuredAge" Type="Int32" />
+    <Property Name="Nominee" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Relation" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PremiumPaymentFrequency" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Customer" Relationship="Self.FK__Policys__Custome__178D7CA5" FromRole="Policys" ToRole="Customers" />
+    <NavigationProperty Name="Endorsements" Relationship="Self.FK__Endorseme__Polic__324172E1" FromRole="Policys" ToRole="Endorsement" />
+    <NavigationProperty Name="InsuranceProduct" Relationship="Self.FK__Policys__Product__1881A0DE" FromRole="Policys" ToRole="InsuranceProducts" />
+  </EntityType>
+  <Association Name="FK__Endorseme__CustI__30592A6F">
+    <End Role="Customers" Type="Self.Customer" Multiplicity="0..1" />
+    <End Role="Endorsement" Type="Self.Endorsement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="CustId" />
+      </Principal>
+      <Dependent Role="Endorsement">
+        <PropertyRef Name="CustId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Logins__Customer__3EA749C6">
+    <End Role="Customers" Type="Self.Customer" Multiplicity="0..1" />
+    <End Role="Logins" Type="Self.Login" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="CustId" />
+      </Principal>
+      <Dependent Role="Logins">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Policys__Custome__178D7CA5">
+    <End Role="Customers" Type="Self.Customer" Multiplicity="0..1" />
+    <End Role="Policys" Type="Self.Policy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="CustId" />
+      </Principal>
+      <Dependent Role="Policys">
+        <PropertyRef Name="Customerno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Endorseme__Polic__324172E1">
+    <End Role="Policys" Type="Self.Policy" Multiplicity="0..1" />
+    <End Role="Endorsement" Type="Self.Endorsement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Policys">
+        <PropertyRef Name="PolicyNumber" />
+      </Principal>
+      <Dependent Role="Endorsement">
+        <PropertyRef Name="Policynumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Endorseme__Produ__314D4EA8">
+    <End Role="InsuranceProducts" Type="Self.InsuranceProduct" Multiplicity="0..1" />
+    <End Role="Endorsement" Type="Self.Endorsement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InsuranceProducts">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="Endorsement">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Policys__Product__1881A0DE">
+    <End Role="InsuranceProducts" Type="Self.InsuranceProduct" Multiplicity="0..1" />
+    <End Role="Policys" Type="Self.Policy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InsuranceProducts">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="Policys">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="sqlpracticeEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Customers" EntityType="Self.Customer" />
+    <EntitySet Name="Endorsements" EntityType="Self.Endorsement" />
+    <EntitySet Name="InsuranceProducts" EntityType="Self.InsuranceProduct" />
+    <EntitySet Name="Logins" EntityType="Self.Login" />
+    <EntitySet Name="Policys" EntityType="Self.Policy" />
+    <AssociationSet Name="FK__Endorseme__CustI__30592A6F" Association="Self.FK__Endorseme__CustI__30592A6F">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="Endorsement" EntitySet="Endorsements" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Logins__Customer__3EA749C6" Association="Self.FK__Logins__Customer__3EA749C6">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="Logins" EntitySet="Logins" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Policys__Custome__178D7CA5" Association="Self.FK__Policys__Custome__178D7CA5">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="Policys" EntitySet="Policys" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Endorseme__Polic__324172E1" Association="Self.FK__Endorseme__Polic__324172E1">
+      <End Role="Policys" EntitySet="Policys" />
+      <End Role="Endorsement" EntitySet="Endorsements" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Endorseme__Produ__314D4EA8" Association="Self.FK__Endorseme__Produ__314D4EA8">
+      <End Role="InsuranceProducts" EntitySet="InsuranceProducts" />
+      <End Role="Endorsement" EntitySet="Endorsements" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Policys__Product__1881A0DE" Association="Self.FK__Policys__Product__1881A0DE">
+      <End Role="InsuranceProducts" EntitySet="InsuranceProducts" />
+      <End Role="Policys" EntitySet="Policys" />
+    </AssociationSet>
+    <FunctionImport Name="prcShowPolicy" ReturnType="Collection(sqlpracticeModel.prcShowPolicy_Result)" />
+    <FunctionImport Name="prcShowCustomer" ReturnType="Collection(sqlpracticeModel.prcShowCustomer_Result)" />
+    <FunctionImport Name="prcShowLogin" ReturnType="Collection(sqlpracticeModel.prcShowLogin_Result)" />
+    <FunctionImport Name="prcShowInsuranceProduct" ReturnType="Collection(sqlpracticeModel.prcShowInsuranceProduct_Result)" />
+    <FunctionImport Name="prcShowEndorsement" ReturnType="Collection(sqlpracticeModel.prcShowEndorsement_Result)" />
+  </EntityContainer>
+  <ComplexType Name="prcShowPolicy_Result">
+    <Property Type="String" Name="PolicyNumber" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="Customerno" Nullable="true" />
+    <Property Type="Int32" Name="ProductId" Nullable="true" />
+    <Property Type="String" Name="Createid" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Updateid" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="UpdateDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="InsuredName" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="InsuredAge" Nullable="true" />
+    <Property Type="String" Name="Nominee" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Relation" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="PremiumPaymentFrequency" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="prcShowCustomer_Result">
+    <Property Type="Int32" Name="CustId" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Telephone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Gender" Nullable="true" MaxLength="10" />
+    <Property Type="DateTime" Name="Dob" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Smoker" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Hobbies" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Createid" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Updateid" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="UpdateDate" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="prcShowLogin_Result">
+    <Property Type="String" Name="LoginId" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="Password" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="CustomerId" Nullable="true" />
+    <Property Type="String" Name="Createid" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Updateid" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="UpdateDate" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="prcShowInsuranceProduct_Result">
+    <Property Type="Int32" Name="ProductId" Nullable="false" />
+    <Property Type="String" Name="Products" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Createid" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Updateid" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="UpdateDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ProductType" Nullable="true" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="prcShowEndorsement_Result">
+    <Property Type="Int32" Name="TransactionId" Nullable="false" />
+    <Property Type="Int32" Name="CustId" Nullable="true" />
+    <Property Type="Int32" Name="ProductId" Nullable="true" />
+    <Property Type="String" Name="Policynumber" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Createid" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Updateid" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="UpdateDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="InsuredName" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="InsuredAge" Nullable="true" />
+    <Property Type="DateTime" Name="Dob" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Gender" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Nominee" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Relation" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Smoker" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Telephone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PremiumPaymentFrequency" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="EndorsementStatus" Nullable="true" MaxLength="20" />
+  </ComplexType>
+</Schema>
